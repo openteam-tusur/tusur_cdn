@@ -19,10 +19,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.11"
+  spec.add_development_dependency "bundler"
   spec.add_dependency "activesupport"
   spec.add_dependency "configliere"
   spec.add_dependency "redis"
   spec.add_dependency "hashie"
-  spec.add_dependency "rest_client"
+  spec.add_dependency "rest-client"
 end
