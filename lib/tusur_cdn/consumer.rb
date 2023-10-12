@@ -21,11 +21,9 @@ module TusurCdn
       METHOD_PREFIX.each do |method_prefix|
         result = send "consume_#{method_prefix}"
         unless result
-          request = JSON.parse RestClient.post("#{Settings['profile.url']}/cdn/update", {key: :header})
-          raise 'Profile malfunction!' if request['result'] != 'ok'
+          JSON.parse RestClient.post("#{Settings['profile.url']}/cdn/update", {key: key})
           result = send "consume_#{method_prefix}"
         end
-        result
       end
     end
 
