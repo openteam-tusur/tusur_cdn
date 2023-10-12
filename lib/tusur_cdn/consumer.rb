@@ -24,8 +24,8 @@ module TusurCdn
           JSON.parse RestClient.post("#{Settings['profile.url']}/cdn/update", {key: key})
           result = send "consume_#{method_prefix}"
         end
+        result
       end
-      result
     end
 
     def consume_css
