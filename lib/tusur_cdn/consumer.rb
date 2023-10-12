@@ -25,6 +25,7 @@ module TusurCdn
           result = send "consume_#{method_prefix}"
         end
       end
+      result
     end
 
     def consume_css
